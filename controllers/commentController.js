@@ -48,12 +48,12 @@ class CommentController {
      * Get All
      */
     static getAll(req,res) {
-        let userId = res.locals.user.id;
+        // let userId = res.locals.user.id;
 
         Comment.findAll({
-            where:{
-                UserId: userId
-            },
+            // where:{
+            //     UserId: userId
+            // },
             include: [
                 { model: User, attributes: ['id','username','profile_image_url','phone_number']},
                 { model: Photo, attributes: ['id','title','caption','poster_image_url']}
