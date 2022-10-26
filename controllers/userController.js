@@ -119,7 +119,7 @@ class UserController {
                 where:{
                     id: req.params.id
                 },
-                returning:false
+                returning:true
             }
         )
         .then(result => {
