@@ -53,12 +53,12 @@ class PhotoController {
      * Get All
      */
     static getAll(req,res) {
-        let userId = res.locals.user.id;
+        // let userId = res.locals.user.id;
 
         Photo.findAll({
-            where:{
-                UserId: userId
-            },
+            // where:{
+            //     UserId: userId
+            // },
             include: [
                 { model: User, attributes: ['id','username','profile_image_url']},
                 { model: Comment, attributes: ['comment'],include:[{model: User, attributes: ['username']}]}
