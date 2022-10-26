@@ -26,8 +26,8 @@ class UserController {
                     email,
                     username,
                     profile_image_url,
-                    age,
-                    phone_number,
+                    age: result.age,
+                    phone_number: result.phone_number,
                 }
             }
 
@@ -129,8 +129,8 @@ class UserController {
                     email,
                     username,
                     profile_image_url,
-                    age,
-                    phone_number,
+                    age: result[1][0].age,
+                    phone_number: result[1][0].phone_number,
                 }
             }
 
