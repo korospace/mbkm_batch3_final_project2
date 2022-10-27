@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "npx sequelize-cli db:migrate && node app.js"
+    "start": "node app.js",
+    "build": "npx sequelize-cli db:migrate"
   },
   "author": "",
   "license": "ISC",
