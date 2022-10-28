@@ -1,0 +1,92 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "MyGram",
+    "description": "Application for displaying photos and commenting on other users"
+  },
+  "host": "localhost:4000",
+  "basePath": "/",
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/users/register": {
+      "post": {
+        "tags": ["Users"],
+        "description": "Create new account",
+        "parameters": [
+          {
+            "in": "body",
+            "schema": {
+              "required": ["email","full_name","username","profile_image_url","age","phone_number"],
+              "properties": {
+                "email": {
+                  "type": "integer",
+                  "uniqueItems": true,
+                  "falid email": true
+                },
+                "full_name": {
+                  "type": "string",
+                  "empty": false
+                },
+                "username": {
+                  "type": "string",
+                  "uniqueItems": true,
+                  "empty": false
+                },
+                "profile_image_url": {
+                  "type": "string",
+                  "empty": false,
+                  "falid url": true
+                },
+                "age": {
+                  "type": "integer",
+                  "empty": false
+                },
+                "phone_number": {
+                  "type": "integer",
+                  "empty": false
+                }
+              }
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "201": {
+            "description": "Register success",
+            "schema": {
+              "properties": {
+                "user":{
+                  "type":"object",
+                  "properties": {
+                    "email": {
+                      "type": "integer",
+                      "uniqueItems": true
+                    },
+                    "full_name": {
+                      "type": "string"
+                    },
+                    "username": {
+                      "type": "string"
+                    },
+                    "profile_image_url": {
+                      "type": "string"
+                    },
+                    "age": {
+                      "type": "integer"
+                    },
+                    "phone_number": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
