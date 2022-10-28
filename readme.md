@@ -4,8 +4,6 @@
         <a href="https://koro-project2.up.railway.app"><strong>https://koro-project2.up.railway.app</strong></a>
     </h2>
 </p>
-<hr>
-<br>
 <br>
 
 ## How to run this project at your local server
