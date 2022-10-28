@@ -12,7 +12,8 @@
 2. Run command line below
     ```bash
     npm install
-    npm run build
+    npm run db:create
+    npm run db:migrate
     npm run start
     ```
 3. The project will start at http://localhost:4000
