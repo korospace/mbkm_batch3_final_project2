@@ -1,16 +1,16 @@
 heroku config:set NODE_MODULES_CACHE=false
-heroku logs --tail
 
-"production": {
-    "username": "tojtmpnptoskor",
-    "password": "b41a8c3bdd0307b3a6a2bf7c90a88e0181aad2c8c08dad4a3005fe97e353941f",
-    "database": "d300pt2f2b2k3s",
-    "host": "ec2-44-210-228-110.compute-1.amazonaws.com",
-    "dialect": "postgres",
-    "dialectOptions": {
-      "ssl": {
-        "require": true,
-        "rejectUnauthorized": false 
+## heroku postgres credential
+  "production": {
+      "username": "tojtmpnptoskor",
+      "password": "b41a8c3bdd0307b3a6a2bf7c90a88e0181aad2c8c08dad4a3005fe97e353941f",
+      "database": "d300pt2f2b2k3s",
+      "host": "ec2-44-210-228-110.compute-1.amazonaws.com",
+      "dialect": "postgres",
+      "dialectOptions": {
+        "ssl": {
+          "require": true,
+          "rejectUnauthorized": false 
+        }
       }
     }
-  }
